@@ -71,5 +71,12 @@ const buscarClientesAtivos = () => clientes.filter(clientes => clientes.ativo ==
 
 const buscarMaioresDeIdade = () => clientes.filter(cliente => cliente.idade >= 18);
 
+const ativos = buscarClientesAtivos ().map(cliente => {
+    return `${cliente.nome} - ${cliente.ativo}`; 
+})
+const maiorIdade = buscarMaioresDeIdade ().map(cliente => {
+    return `${cliente.nome} - ${cliente.idade}`; 
+})
+
 console.log("Clientes ativos: " , buscarClientesAtivos());
 console.log(`Clientes maiores de idade:`, buscarMaioresDeIdade());
